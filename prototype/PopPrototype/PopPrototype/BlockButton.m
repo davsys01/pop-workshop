@@ -8,6 +8,7 @@
 
 #import "BlockButton.h"
 #import <POP/POP.h>
+#import <Tweaks/FBTweakInline.h>
 
 IB_DESIGNABLE
 @implementation BlockButton
@@ -46,15 +47,18 @@ IB_DESIGNABLE
 
 - (void)zoomIn {
   POPBasicAnimation *zoomAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-  zoomAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0.9, 0.9)];
+  CGFloat zoomInSize = FBTweakValue(@"Button", @"Zoom In", @"Size", 0.9, 0.0, 2.0);
+  zoomAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(zoomInSize, zoomInSize)];
   [self.layer pop_addAnimation:zoomAnimation forKey:@"layerZoomInAnimation"];
 }
 
 - (void)zoomDefault {
   POPSpringAnimation *zoomAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
   zoomAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.0, 1.0)];
-  zoomAnimation.velocity = [NSValue valueWithCGSize:CGSizeMake(3.0, 3.0)];
-  zoomAnimation.springBounciness = 25.0;
+  CGFloat zoomOutVelocity = FBTweakValue(@"Button", @"Zoom Out", @"Velocity", 3.0, 0.0, 20.0);
+  CGFloat zoomOutBounciness = FBTweakValue(@"Button", @"Zoom Out", @"Bounciness", 25.0, 0.0, 50.0);
+  zoomAnimation.velocity = [NSValue valueWithCGSize:CGSizeMake(zoomOutVelocity, zoomOutVelocity)];
+  zoomAnimation.springBounciness = zoomOutBounciness;
   [self.layer pop_addAnimation:zoomAnimation forKey:@"layerZoomDefaultAnimation"];
 }
 
