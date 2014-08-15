@@ -25,13 +25,30 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlQ-O9-AOb" customClass="BlockButton">
+                                <rect key="frame" x="212" y="379" width="177" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Do Not Press">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDoNotPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E9E-j8-MGk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tlQ-O9-AOb" firstAttribute="top" secondItem="FMK-MT-dy2" secondAttribute="bottom" constant="50" id="PvW-kc-7yG"/>
+                            <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-0.5" id="RSD-i4-0s4"/>
                             <constraint firstAttribute="centerX" secondItem="FMK-MT-dy2" secondAttribute="centerX" id="rWM-af-0fs"/>
                             <constraint firstAttribute="centerY" secondItem="FMK-MT-dy2" secondAttribute="centerY" id="xSv-Fi-sCH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doNotPressButton" destination="tlQ-O9-AOb" id="Xth-n6-E02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

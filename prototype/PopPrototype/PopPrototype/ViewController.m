@@ -7,21 +7,28 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import <POP/POP.h>
+#import <Tweaks/FBTweakInline.h>
 
 @implementation ViewController
-            
-- (void)viewDidLoad {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+
+- (IBAction)handleDoNotPress:(id)sender {
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [self shakeButton:self.doNotPressButton];
+  });
 }
 
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-}
 
+- (void)shakeButton:(BlockButton *)button {
+  button.userInteractionEnabled = NO;
+  POPSpringAnimation *shakeAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+  CGFloat shakeVelocity = FBTweakValue(@"Button", @"Shake", @"Velocity", 2000, 0, 3000);
+  CGFloat shakeBounciness = FBTweakValue(@"Button", @"Shake", @"Bounciness", 20 , 0, 40);
+  shakeAnimation.velocity = @(shakeVelocity);
+  shakeAnimation.springBounciness = shakeBounciness;
+  [shakeAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
+    button.userInteractionEnabled = YES;
+  }];
+  [button.layer pop_addAnimation:shakeAnimation forKey:@"shakeAnimation"];
+}
 @end

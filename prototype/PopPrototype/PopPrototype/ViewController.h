@@ -6,9 +6,14 @@
 //  Copyright (c) 2014 ShinobiControls. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+#import "BlockButton.h"
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet BlockButton *doNotPressButton;
+
+- (IBAction)handleDoNotPress:(id)sender;
 
 
 @end
