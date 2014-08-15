@@ -12,6 +12,7 @@
 		22F82BAE199E4BEE008B4BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F82BAC199E4BEE008B4BDC /* Main.storyboard */; };
 		22F82BB0199E4BEE008B4BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F82BAF199E4BEE008B4BDC /* Images.xcassets */; };
 		22F82BBC199E4BEE008B4BDC /* PopPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F82BBB199E4BEE008B4BDC /* PopPrototypeTests.swift */; };
+		22F82BC7199E5365008B4BDC /* SolidButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F82BC6199E5365008B4BDC /* SolidButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		22F82BB5199E4BEE008B4BDC /* PopPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F82BBA199E4BEE008B4BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F82BBB199E4BEE008B4BDC /* PopPrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopPrototypeTests.swift; sourceTree = "<group>"; };
+		22F82BC6199E5365008B4BDC /* SolidButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		22F82BA5199E4BEE008B4BDC /* PopPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				22F82BC5199E5346008B4BDC /* Views */,
 				22F82BA8199E4BEE008B4BDC /* AppDelegate.swift */,
 				22F82BAA199E4BEE008B4BDC /* ViewController.swift */,
 				22F82BAC199E4BEE008B4BDC /* Main.storyboard */,
@@ -107,6 +110,14 @@
 				22F82BBA199E4BEE008B4BDC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22F82BC5199E5346008B4BDC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22F82BC6199E5365008B4BDC /* SolidButton.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 			files = (
 				22F82BAB199E4BEE008B4BDC /* ViewController.swift in Sources */,
 				22F82BA9199E4BEE008B4BDC /* AppDelegate.swift in Sources */,
+				22F82BC7199E5365008B4BDC /* SolidButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
