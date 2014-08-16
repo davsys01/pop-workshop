@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet BlockButton *doNotPressButton;
 
+- (IBAction)handleDismiss:(id)sender;
 - (IBAction)handleDoNotPress:(id)sender;
 
 

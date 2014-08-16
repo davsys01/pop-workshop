@@ -12,6 +12,12 @@
 
 @implementation WelcomeViewController
 
+- (IBAction)handleDismiss:(id)sender {
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+  });
+}
+
 - (IBAction)handleDoNotPress:(id)sender {
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     [self shakeButton:self.doNotPressButton];

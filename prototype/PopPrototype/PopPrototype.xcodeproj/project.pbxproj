@@ -14,6 +14,7 @@
 		227EF415199E97D8006E3A77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227EF414199E97D8006E3A77 /* Images.xcassets */; };
 		227EF421199E97D8006E3A77 /* PopPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF420199E97D8006E3A77 /* PopPrototypeTests.m */; };
 		227EF42D199E994B006E3A77 /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF42C199E994B006E3A77 /* BlockButton.m */; };
+		227EF430199F284F006E3A77 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF42F199F284F006E3A77 /* MainViewController.m */; };
 		D53A124D92964B7E873A6D8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E472797AB8747F69D4F4F70 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		227EF420199E97D8006E3A77 /* PopPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopPrototypeTests.m; sourceTree = "<group>"; };
 		227EF42B199E994B006E3A77 /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
 		227EF42C199E994B006E3A77 /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
+		227EF42E199F284F006E3A77 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		227EF42F199F284F006E3A77 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2946208952D04B68800F92CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4E472797AB8747F69D4F4F70 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +91,7 @@
 		227EF406199E97D8006E3A77 /* PopPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				227EF431199F2B5B006E3A77 /* Transitioning */,
 				227EF42A199E9932006E3A77 /* Views */,
 				227EF40B199E97D8006E3A77 /* AppDelegate.h */,
 				227EF40C199E97D8006E3A77 /* AppDelegate.m */,
@@ -96,6 +100,8 @@
 				227EF411199E97D8006E3A77 /* Main.storyboard */,
 				227EF414199E97D8006E3A77 /* Images.xcassets */,
 				227EF407199E97D8006E3A77 /* Supporting Files */,
+				227EF42E199F284F006E3A77 /* MainViewController.h */,
+				227EF42F199F284F006E3A77 /* MainViewController.m */,
 			);
 			path = PopPrototype;
 			sourceTree = "<group>";
@@ -133,6 +139,13 @@
 				227EF42C199E994B006E3A77 /* BlockButton.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		227EF431199F2B5B006E3A77 /* Transitioning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Transitioning;
 			sourceTree = "<group>";
 		};
 		888F3209E17C4708BEF89D7E /* Frameworks */ = {
@@ -280,6 +293,7 @@
 				227EF410199E97D8006E3A77 /* WelcomeViewController.m in Sources */,
 				227EF40D199E97D8006E3A77 /* AppDelegate.m in Sources */,
 				227EF40A199E97D8006E3A77 /* main.m in Sources */,
+				227EF430199F284F006E3A77 /* MainViewController.m in Sources */,
 				227EF42D199E994B006E3A77 /* BlockButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

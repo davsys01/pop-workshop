@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xwY-ly-6r8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="WelcomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeViewController" title="Welcome" id="vXZ-lx-hvc" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,19 +17,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-MT-dy2" customClass="BlockButton">
-                                <rect key="frame" x="243" y="271" width="114" height="58"/>
-                                <color key="backgroundColor" red="1" green="0.86195106580000003" blue="0.15694230179999999" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="239" y="271" width="121" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.86195106580000003" blue="0.15694230179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="dismiss">
                                     <color key="titleColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="handleDismiss:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TSb-Vk-3aZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlQ-O9-AOb" customClass="BlockButton">
-                                <rect key="frame" x="212" y="379" width="177" height="58"/>
+                                <rect key="frame" x="215" y="429" width="170" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                <state key="normal" title="Do Not Press">
+                                <state key="normal" title="do not press">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -37,11 +40,20 @@
                                     <action selector="handleDoNotPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E9E-j8-MGk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-AZ-0Wd">
+                                <rect key="frame" x="203" y="162" width="194" height="59"/>
+                                <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.33759016139999998" green="0.73422044320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tlQ-O9-AOb" firstAttribute="top" secondItem="FMK-MT-dy2" secondAttribute="bottom" constant="50" id="PvW-kc-7yG"/>
+                            <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="kQY-AZ-0Wd" secondAttribute="centerX" id="9e2-Oc-ldL"/>
+                            <constraint firstItem="tlQ-O9-AOb" firstAttribute="top" secondItem="FMK-MT-dy2" secondAttribute="bottom" constant="100" id="PvW-kc-7yG"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-0.5" id="RSD-i4-0s4"/>
+                            <constraint firstItem="FMK-MT-dy2" firstAttribute="top" secondItem="kQY-AZ-0Wd" secondAttribute="bottom" constant="50" id="YPD-w9-DJh"/>
                             <constraint firstAttribute="centerX" secondItem="FMK-MT-dy2" secondAttribute="centerX" id="rWM-af-0fs"/>
                             <constraint firstAttribute="centerY" secondItem="FMK-MT-dy2" secondAttribute="centerY" id="xSv-Fi-sCH"/>
                         </constraints>
@@ -52,6 +64,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Main-->
+        <scene sceneID="8r6-mK-fVa">
+            <objects>
+                <viewController storyboardIdentifier="mainViewController" title="Main" id="xwY-ly-6r8" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="reM-zf-OaN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zu8-Yj-7fU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XNG-nM-we9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztB-SI-A7N">
+                                <rect key="frame" x="257" y="275" width="85.5" height="48.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="41"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-Ms-aG0" customClass="BlockButton">
+                                <rect key="frame" x="232" y="363" width="136" height="58"/>
+                                <color key="backgroundColor" red="0.33759016139999998" green="0.73422044320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="welcome">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="displayWelcome" id="z7c-YJ-GuK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ztB-SI-A7N" secondAttribute="centerY" id="7yu-ul-NK0"/>
+                            <constraint firstItem="X7P-Ms-aG0" firstAttribute="top" secondItem="ztB-SI-A7N" secondAttribute="bottom" constant="40" id="NQ2-bJ-X0s"/>
+                            <constraint firstAttribute="centerX" secondItem="ztB-SI-A7N" secondAttribute="centerX" id="fgw-tY-mcp"/>
+                            <constraint firstItem="ztB-SI-A7N" firstAttribute="centerX" secondItem="X7P-Ms-aG0" secondAttribute="centerX" id="yLa-ou-pON"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJd-AK-kr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="792"/>
         </scene>
     </scenes>
 </document>
