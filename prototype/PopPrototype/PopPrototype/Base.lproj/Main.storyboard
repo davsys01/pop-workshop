@@ -47,10 +47,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i said don't press the button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-3U-ADS">
+                                <rect key="frame" x="166" y="500" width="266" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.33759016139999998" green="0.73422044320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rKQ-3U-ADS" firstAttribute="top" secondItem="tlQ-O9-AOb" secondAttribute="bottom" constant="13" id="7dN-xG-cqk"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="kQY-AZ-0Wd" secondAttribute="centerX" id="9e2-Oc-ldL"/>
+                            <constraint firstItem="rKQ-3U-ADS" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-1" id="FYb-pI-cfy"/>
                             <constraint firstItem="tlQ-O9-AOb" firstAttribute="top" secondItem="FMK-MT-dy2" secondAttribute="bottom" constant="100" id="PvW-kc-7yG"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-0.5" id="RSD-i4-0s4"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="top" secondItem="kQY-AZ-0Wd" secondAttribute="bottom" constant="50" id="YPD-w9-DJh"/>
@@ -60,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="doNotPressButton" destination="tlQ-O9-AOb" id="Xth-n6-E02"/>
+                        <outlet property="doNotPressLabel" destination="rKQ-3U-ADS" id="dVG-lj-6DY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@
 @interface WelcomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet BlockButton *doNotPressButton;
+@property (weak, nonatomic) IBOutlet UILabel *doNotPressLabel;
 
 - (IBAction)handleDismiss:(id)sender;
 - (IBAction)handleDoNotPress:(id)sender;
