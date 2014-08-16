@@ -9,7 +9,7 @@
 @import UIKit;
 #import "BlockButton.h"
 
-@interface ViewController : UIViewController
+@interface WelcomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet BlockButton *doNotPressButton;
 

@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 ShinobiControls. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WelcomeViewController.h"
 #import <POP/POP.h>
 #import <Tweaks/FBTweakInline.h>
 
-@implementation ViewController
+@implementation WelcomeViewController
 
 - (IBAction)handleDoNotPress:(id)sender {
   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
