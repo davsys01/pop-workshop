@@ -15,6 +15,7 @@
 		227EF421199E97D8006E3A77 /* PopPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF420199E97D8006E3A77 /* PopPrototypeTests.m */; };
 		227EF42D199E994B006E3A77 /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF42C199E994B006E3A77 /* BlockButton.m */; };
 		227EF430199F284F006E3A77 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF42F199F284F006E3A77 /* MainViewController.m */; };
+		227EF43419A161D1006E3A77 /* OverlayTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF43319A161D1006E3A77 /* OverlayTransitioningDelegate.m */; };
 		D53A124D92964B7E873A6D8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E472797AB8747F69D4F4F70 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		227EF42C199E994B006E3A77 /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
 		227EF42E199F284F006E3A77 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		227EF42F199F284F006E3A77 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		227EF43219A161D1006E3A77 /* OverlayTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayTransitioningDelegate.h; sourceTree = "<group>"; };
+		227EF43319A161D1006E3A77 /* OverlayTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayTransitioningDelegate.m; sourceTree = "<group>"; };
 		2946208952D04B68800F92CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4E472797AB8747F69D4F4F70 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +147,8 @@
 		227EF431199F2B5B006E3A77 /* Transitioning */ = {
 			isa = PBXGroup;
 			children = (
+				227EF43219A161D1006E3A77 /* OverlayTransitioningDelegate.h */,
+				227EF43319A161D1006E3A77 /* OverlayTransitioningDelegate.m */,
 			);
 			name = Transitioning;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227EF410199E97D8006E3A77 /* WelcomeViewController.m in Sources */,
+				227EF43419A161D1006E3A77 /* OverlayTransitioningDelegate.m in Sources */,
 				227EF40D199E97D8006E3A77 /* AppDelegate.m in Sources */,
 				227EF40A199E97D8006E3A77 /* main.m in Sources */,
 				227EF430199F284F006E3A77 /* MainViewController.m in Sources */,

@@ -7,12 +7,27 @@
 //
 
 #import "MainViewController.h"
-#import <Tweaks/FBTweakInline.h>
+#import "OverlayTransitioningDelegate.h"
 
 @interface MainViewController ()
+
+@property (nonatomic, strong) id<UIViewControllerTransitioningDelegate> transitioningDelegate;
 
 @end
 
 @implementation MainViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.transitioningDelegate = [OverlayTransitioningDelegate new];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"displayWelcome"]) {
+    UIViewController *destinationVC = segue.destinationViewController;
+    destinationVC.transitioningDelegate = self.transitioningDelegate;
+  }
+}
 
 @end
