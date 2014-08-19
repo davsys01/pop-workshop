@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-MT-dy2" customClass="BlockButton">
-                                <rect key="frame" x="239" y="271" width="121" height="58"/>
+                                <rect key="frame" x="239" y="179" width="121" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.86195106580000003" blue="0.15694230179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="dismiss">
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlQ-O9-AOb" customClass="BlockButton">
-                                <rect key="frame" x="215" y="429" width="170" height="58"/>
+                                <rect key="frame" x="215" y="483" width="170" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="do not press">
@@ -41,14 +41,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-AZ-0Wd">
-                                <rect key="frame" x="203" y="162" width="194" height="59"/>
+                                <rect key="frame" x="203" y="70" width="194" height="59"/>
                                 <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i said don't press the button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-3U-ADS">
-                                <rect key="frame" x="166" y="500" width="266" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i said don't press it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-3U-ADS">
+                                <rect key="frame" x="209" y="554" width="179" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -59,11 +59,11 @@
                             <constraint firstItem="rKQ-3U-ADS" firstAttribute="top" secondItem="tlQ-O9-AOb" secondAttribute="bottom" constant="13" id="7dN-xG-cqk"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="kQY-AZ-0Wd" secondAttribute="centerX" id="9e2-Oc-ldL"/>
                             <constraint firstItem="rKQ-3U-ADS" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-1" id="FYb-pI-cfy"/>
-                            <constraint firstItem="tlQ-O9-AOb" firstAttribute="top" secondItem="FMK-MT-dy2" secondAttribute="bottom" constant="100" id="PvW-kc-7yG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rKQ-3U-ADS" secondAttribute="bottom" constant="20" id="GCe-vS-60H"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-0.5" id="RSD-i4-0s4"/>
+                            <constraint firstItem="kQY-AZ-0Wd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="TtY-7G-xmh"/>
                             <constraint firstItem="FMK-MT-dy2" firstAttribute="top" secondItem="kQY-AZ-0Wd" secondAttribute="bottom" constant="50" id="YPD-w9-DJh"/>
                             <constraint firstAttribute="centerX" secondItem="FMK-MT-dy2" secondAttribute="centerX" id="rWM-af-0fs"/>
-                            <constraint firstAttribute="centerY" secondItem="FMK-MT-dy2" secondAttribute="centerY" id="xSv-Fi-sCH"/>
                         </constraints>
                     </view>
                     <connections>
