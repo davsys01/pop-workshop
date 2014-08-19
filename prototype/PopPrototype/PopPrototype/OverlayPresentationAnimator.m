@@ -8,6 +8,7 @@
 
 #import "OverlayPresentationAnimator.h"
 #import <POP/POP.h>
+#import <Tweaks/FBTweakInline.h>
 
 @implementation OverlayPresentationAnimator
 
@@ -22,15 +23,15 @@
   
   UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
   toView.layer.cornerRadius = 4.0;
+  toView.center = CGPointMake(toView.center.x, -toView.bounds.size.height / 2.0);
   
   [[transitionContext containerView] addSubview:toView];
   
   
   POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-  positionAnimation.toValue = @(toView.layer.position.y);
-  positionAnimation.fromValue = @(-toView.layer.bounds.size.height / 2.0);
-  positionAnimation.velocity = @(10);
-  positionAnimation.springBounciness = 15.0;
+  positionAnimation.toValue = @([transitionContext containerView].layer.position.y);
+  positionAnimation.velocity = @(FBTweakValue(@"Overlay", @"Presentation", @"Velocity", 10, 0, 30));
+  positionAnimation.springBounciness = FBTweakValue(@"Overlay", @"Presentation", @"Bounciness", 15.0, 0, 50.0);
   [positionAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
     [transitionContext completeTransition:YES];
   }];
