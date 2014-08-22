@@ -7,6 +7,7 @@
 //
 
 #import "ZoomableImageCollection.h"
+#import "ZoomableImageView.h"
 
 @interface ZoomableImageCollection ()
 
@@ -23,15 +24,12 @@
   if(self) {
     self.images = images;
     self.imageHeight = imageHeight;
+    [self updateLayout];
   }
   return self;
 }
 
 #pragma mark - Utility Methods
-- (void)layoutSubviews {
-  [self updateLayout];
-}
-
 - (void)updateLayout {
   if(self.imageViews) {
     for (UIView *view in self.imageViews) {
@@ -43,7 +41,7 @@
   CGFloat width = self.bounds.size.width / self.images.count;
   CGFloat yValue = self.bounds.size.height - self.imageHeight;
   for (int i=0; i < self.images.count; i++) {
-    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(i * width, yValue, width, self.imageHeight)];
+    ZoomableImageView *iv = [[ZoomableImageView alloc] initWithFrame:CGRectMake(i * width, yValue, width, self.imageHeight)];
     iv.contentMode = UIViewContentModeScaleAspectFill;
     iv.image = self.images[i];
     iv.clipsToBounds = YES;
