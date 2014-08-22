@@ -8,10 +8,12 @@
 
 #import "MainViewController.h"
 #import "OverlayTransitioningDelegate.h"
+#import "ZoomableImageCollection.h"
 
 @interface MainViewController ()
 
 @property (nonatomic, strong) id<UIViewControllerTransitioningDelegate> transitioningDelegate;
+@property (nonatomic, strong) ZoomableImageCollection *zoomableImageCollection;
 
 @end
 
@@ -20,6 +22,15 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.transitioningDelegate = [OverlayTransitioningDelegate new];
+  NSArray *imageNames = @[@"green", @"yellow", @"soft", @"droplet"];
+  NSMutableArray *images = [NSMutableArray new];
+  [imageNames enumerateObjectsUsingBlock:^(NSString *name, NSUInteger idx, BOOL *stop) {
+    [images addObject:[UIImage imageNamed:name]];
+  }];
+  self.zoomableImageCollection = [[ZoomableImageCollection alloc] initWithFrame:self.view.bounds
+                                                                         images:[images copy]
+                                                                    imageHeight:200];
+  [self.view insertSubview:self.zoomableImageCollection atIndex:0];
 }
 
 
