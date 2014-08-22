@@ -10,6 +10,8 @@
 
 @interface ZoomableImageView : UIImageView
 
+@property (nonatomic, assign) CGRect baseFrame;
+
 - (void)toggleZoom;
 
 @end

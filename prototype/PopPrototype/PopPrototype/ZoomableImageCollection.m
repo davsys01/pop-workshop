@@ -29,14 +29,25 @@
   return self;
 }
 
+- (void)layoutSubviews {
+  [super layoutSubviews];
+  [self updateLayout];
+}
+
 #pragma mark - Utility Methods
 - (void)updateLayout {
-  if(self.imageViews) {
-    for (UIView *view in self.imageViews) {
-      [view removeFromSuperview];
-    }
+  if(!self.imageViews) {
+    [self createImageViews];
   }
   
+  CGFloat width = self.bounds.size.width / self.images.count;
+  CGFloat yValue = self.bounds.size.height - self.imageHeight;
+  [self.imageViews enumerateObjectsUsingBlock:^(ZoomableImageView *iv, NSUInteger idx, BOOL *stop) {
+    iv.baseFrame = CGRectMake(idx * width, yValue, width, self.imageHeight);
+  }];
+}
+
+- (void)createImageViews {
   NSMutableArray *ivs = [NSMutableArray array];
   CGFloat width = self.bounds.size.width / self.images.count;
   CGFloat yValue = self.bounds.size.height - self.imageHeight;

@@ -11,7 +11,6 @@
 
 @interface ZoomableImageView ()
 
-@property (nonatomic, assign) CGRect baseFrame;
 @property (nonatomic, assign) BOOL zoomed;
 
 @end
@@ -28,6 +27,15 @@
     self.userInteractionEnabled = YES;
   }
   return self;
+}
+
+- (void)setBaseFrame:(CGRect)baseFrame {
+  if(!CGRectEqualToRect(_baseFrame, baseFrame)) {
+    _baseFrame = baseFrame;
+    if(!self.zoomed) {
+      self.frame = baseFrame;
+    }
+  }
 }
 
 - (void)toggleZoom {
