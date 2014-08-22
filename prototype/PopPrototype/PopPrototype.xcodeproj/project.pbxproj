@@ -19,7 +19,6 @@
 		227EF43719A1DC4B006E3A77 /* OverlayPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF43619A1DC4B006E3A77 /* OverlayPresentationController.m */; };
 		227EF43A19A1FAAE006E3A77 /* OverlayPresentationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF43919A1FAAE006E3A77 /* OverlayPresentationAnimator.m */; };
 		227EF43D19A2072F006E3A77 /* OverlayDismissalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 227EF43C19A2072F006E3A77 /* OverlayDismissalAnimator.m */; };
-		22F403E119A77FFE001ECA35 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403E019A77FFE001ECA35 /* PhotoCell.m */; };
 		D53A124D92964B7E873A6D8B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E472797AB8747F69D4F4F70 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +57,6 @@
 		227EF43919A1FAAE006E3A77 /* OverlayPresentationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayPresentationAnimator.m; sourceTree = "<group>"; };
 		227EF43B19A2072F006E3A77 /* OverlayDismissalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayDismissalAnimator.h; sourceTree = "<group>"; };
 		227EF43C19A2072F006E3A77 /* OverlayDismissalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayDismissalAnimator.m; sourceTree = "<group>"; };
-		22F403DF19A77FFE001ECA35 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
-		22F403E019A77FFE001ECA35 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		2946208952D04B68800F92CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4E472797AB8747F69D4F4F70 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +103,6 @@
 		227EF406199E97D8006E3A77 /* PopPrototype */ = {
 			isa = PBXGroup;
 			children = (
-				22F403DE19A77FD7001ECA35 /* CollectionView */,
 				227EF431199F2B5B006E3A77 /* Transitioning */,
 				227EF42A199E9932006E3A77 /* Views */,
 				227EF40B199E97D8006E3A77 /* AppDelegate.h */,
@@ -170,15 +166,6 @@
 				227EF43C19A2072F006E3A77 /* OverlayDismissalAnimator.m */,
 			);
 			name = Transitioning;
-			sourceTree = "<group>";
-		};
-		22F403DE19A77FD7001ECA35 /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				22F403DF19A77FFE001ECA35 /* PhotoCell.h */,
-				22F403E019A77FFE001ECA35 /* PhotoCell.m */,
-			);
-			name = CollectionView;
 			sourceTree = "<group>";
 		};
 		888F3209E17C4708BEF89D7E /* Frameworks */ = {
@@ -329,7 +316,6 @@
 				227EF43419A161D1006E3A77 /* OverlayTransitioningDelegate.m in Sources */,
 				227EF40D199E97D8006E3A77 /* AppDelegate.m in Sources */,
 				227EF40A199E97D8006E3A77 /* main.m in Sources */,
-				22F403E119A77FFE001ECA35 /* PhotoCell.m in Sources */,
 				227EF43D19A2072F006E3A77 /* OverlayDismissalAnimator.m in Sources */,
 				227EF430199F284F006E3A77 /* MainViewController.m in Sources */,
 				227EF42D199E994B006E3A77 /* BlockButton.m in Sources */,
