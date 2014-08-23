@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		225716EA19A8FA94006EBD62 /* PTCPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */; };
+		225716EA19A8FA94006EBD62 /* PTCDangerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716E919A8FA94006EBD62 /* PTCDangerViewController.m */; };
 		225716EE19A8FC0B006EBD62 /* PTCZoomableImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */; };
 		22850F6619A904FE00C60CD4 /* PTCDangerIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F6519A904FE00C60CD4 /* PTCDangerIndicator.m */; };
 		22F4040019A8F1AC001ECA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403FF19A8F1AC001ECA35 /* main.m */; };
@@ -31,8 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		225716E819A8FA94006EBD62 /* PTCPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCPopoverViewController.h; sourceTree = "<group>"; };
-		225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCPopoverViewController.m; sourceTree = "<group>"; };
+		225716E819A8FA94006EBD62 /* PTCDangerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCDangerViewController.h; sourceTree = "<group>"; };
+		225716E919A8FA94006EBD62 /* PTCDangerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCDangerViewController.m; sourceTree = "<group>"; };
 		225716EC19A8FC0B006EBD62 /* PTCZoomableImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCZoomableImageCollection.h; sourceTree = "<group>"; };
 		225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCZoomableImageCollection.m; sourceTree = "<group>"; };
 		22850F6419A904FE00C60CD4 /* PTCDangerIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCDangerIndicator.h; sourceTree = "<group>"; };
@@ -167,8 +167,8 @@
 			children = (
 				22F4040419A8F1AC001ECA35 /* PTCWelcomeViewController.h */,
 				22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */,
-				225716E819A8FA94006EBD62 /* PTCPopoverViewController.h */,
-				225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */,
+				225716E819A8FA94006EBD62 /* PTCDangerViewController.h */,
+				225716E919A8FA94006EBD62 /* PTCDangerViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 				22F4042719A8F76C001ECA35 /* PTCPaddedLabel.m in Sources */,
 				22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */,
 				22850F6619A904FE00C60CD4 /* PTCDangerIndicator.m in Sources */,
-				225716EA19A8FA94006EBD62 /* PTCPopoverViewController.m in Sources */,
+				225716EA19A8FA94006EBD62 /* PTCDangerViewController.m in Sources */,
 				22F4040019A8F1AC001ECA35 /* main.m in Sources */,
 				225716EE19A8FC0B006EBD62 /* PTCZoomableImageCollection.m in Sources */,
 			);

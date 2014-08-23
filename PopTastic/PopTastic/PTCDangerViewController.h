@@ -15,9 +15,13 @@
 //
 
 @import UIKit;
+#import "PTCDangerIndicator.h"
 
-@interface PTCPopoverViewController : UIViewController
+@interface PTCDangerViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet PTCDangerIndicator *dangerIndicator;
 
 - (IBAction)handleDismissButtonPressed:(id)sender;
+- (IBAction)handleRandomiseButtonPressed:(id)sender;
 
 @end

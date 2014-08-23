@@ -6,22 +6,28 @@
 //  Copyright (c) 2014 ShinobiControls. All rights reserved.
 //
 
-#import "PTCPopoverViewController.h"
+#import "PTCDangerViewController.h"
 
-@interface PTCPopoverViewController ()
+@interface PTCDangerViewController ()
 
 @end
 
-@implementation PTCPopoverViewController
+@implementation PTCDangerViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
+  // Seed the random number generator
+  srand48(time(0));
 }
 
 
 - (IBAction)handleDismissButtonPressed:(id)sender {
   [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (IBAction)handleRandomiseButtonPressed:(id)sender {
+  self.dangerIndicator.value = drand48();
 }
 
 

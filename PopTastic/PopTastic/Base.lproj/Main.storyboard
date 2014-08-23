@@ -32,10 +32,10 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w16-ad-mfp">
-                                <rect key="frame" x="249" y="169" width="103" height="48"/>
+                                <rect key="frame" x="225" y="169" width="151" height="48"/>
                                 <color key="backgroundColor" red="1" green="0.86195106580000003" blue="0.15694230179999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="popover">
+                                <state key="normal" title="danger level">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-17" y="230"/>
         </scene>
-        <!--Popover View Controller-->
+        <!--Danger View Controller-->
         <scene sceneID="Hwx-EC-QOm">
             <objects>
-                <viewController id="P6J-rW-hUi" customClass="PTCPopoverViewController" sceneMemberID="viewController">
+                <viewController id="P6J-rW-hUi" customClass="PTCDangerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MOa-W7-aUh"/>
                         <viewControllerLayoutGuide type="bottom" id="7li-Bv-gnn"/>
@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="popover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO7-Yp-4E3" customClass="PTCPaddedLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="danger level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO7-Yp-4E3" customClass="PTCPaddedLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                 <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgu-Y1-c9V" customClass="PTCDangerIndicator">
-                                <rect key="frame" x="113.5" y="119" width="373" height="373"/>
+                                <rect key="frame" x="113" y="119" width="373" height="373"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tgu-Y1-c9V" secondAttribute="height" multiplier="1:1" id="0Xs-DX-j4V"/>
@@ -129,11 +129,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOI-oE-Jvn">
+                                <rect key="frame" x="234" y="281.5" width="131" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.29128207420000002" blue="0.4937258739" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="randomise">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDoNotPressPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pHm-MU-mR3"/>
+                                    <action selector="handleRandomiseButtonPressed:" destination="P6J-rW-hUi" eventType="touchUpInside" id="rGw-bL-U5x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.44098753672409552" green="0.84555206472562883" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IO7-Yp-4E3" secondAttribute="trailing" id="1Bw-Ao-MUI"/>
                             <constraint firstAttribute="centerX" secondItem="tgu-Y1-c9V" secondAttribute="centerX" id="GqN-yO-LyK"/>
+                            <constraint firstItem="tgu-Y1-c9V" firstAttribute="centerY" secondItem="iOI-oE-Jvn" secondAttribute="centerY" id="Uqh-qU-fJr"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="tgu-Y1-c9V" secondAttribute="width" priority="750" id="aTm-RR-cWr"/>
                             <constraint firstItem="7li-Bv-gnn" firstAttribute="top" secondItem="bVq-BV-PBU" secondAttribute="bottom" constant="20" id="ab7-WM-GiH">
                                 <variation key="heightClass=compact" constant="10"/>
@@ -142,6 +155,7 @@
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="bVq-BV-PBU" secondAttribute="centerX" constant="1.5" id="i0B-BY-xvR"/>
+                            <constraint firstItem="tgu-Y1-c9V" firstAttribute="centerX" secondItem="iOI-oE-Jvn" secondAttribute="centerX" id="j4f-Xv-C0U"/>
                             <constraint firstItem="bVq-BV-PBU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tgu-Y1-c9V" secondAttribute="bottom" constant="40" id="og3-9l-Vsx">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
@@ -149,6 +163,9 @@
                             <constraint firstItem="IO7-Yp-4E3" firstAttribute="leading" secondItem="GrS-yl-iDx" secondAttribute="leading" id="u79-QH-csC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dangerIndicator" destination="tgu-Y1-c9V" id="Hhu-mn-2Vz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBL-yg-mZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
