@@ -15,6 +15,7 @@
 //
 
 #import "PTCAppDelegate.h"
+#import <Tweaks/FBTweakShakeWindow.h>
 
 @interface PTCAppDelegate ()
 
@@ -25,6 +26,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   return YES;
+}
+
+- (UIWindow *)window
+{
+  if (!_window) {
+    _window = [[FBTweakShakeWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  }
+  return _window;
 }
 
 @end

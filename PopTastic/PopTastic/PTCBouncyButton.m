@@ -16,6 +16,7 @@
 
 #import "PTCBouncyButton.h"
 #import <POP/POP.h>
+#import <Tweaks/FBTweakInline.h>
 
 @implementation PTCBouncyButton
 
@@ -48,15 +49,17 @@
 
 - (void)zoomOnPress {
   POPBasicAnimation *zoomAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-  zoomAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.1, 1.1)];
+  CGFloat zoomSize = FBTweakValue(@"BouncyButton", @"Zoom On Press", @"Size", 1.1, 0.5, 2.0);
+  zoomAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(zoomSize, zoomSize)];
   [self.layer pop_addAnimation:zoomAnimation forKey:@"zoomAnimation"];
 }
 
 - (void)restoreZoom {
   POPSpringAnimation *zoomAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
   zoomAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.0, 1.0)];
-  zoomAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(-5.0, -5.0)];
-  zoomAnimation.springBounciness = 15.0;
+  CGFloat velocity = FBTweakValue(@"BouncyButton", @"Restore Zoom", @"Velocity", -5.0, -10.0, 10.0);
+  zoomAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(velocity, velocity)];
+  zoomAnimation.springBounciness = FBTweakValue(@"BouncyButton", @"Restore Zoom", @"Bounciness", 15.0, 0.0, 30.0);
   [self.layer pop_addAnimation:zoomAnimation forKey:@"restoreAnimation"];
 }
 
