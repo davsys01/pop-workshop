@@ -56,6 +56,7 @@
 }
 
 - (void)dragImage:(UIPanGestureRecognizer *)gesture {
+  [self.superview bringSubviewToFront:self];
   if (gesture.state == UIGestureRecognizerStateChanged) {
     CGPoint offset = [gesture translationInView:self];
     CGFloat proportionComplete = MIN(1.0, ABS(offset.y / self.superview.bounds.size.height * 2.0));
