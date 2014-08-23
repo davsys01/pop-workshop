@@ -17,8 +17,11 @@
 #import "PTCWelcomeViewController.h"
 #import <POP/POP.h>
 #import <Tweaks/FBTweakInline.h>
+#import "PTCOverlayTransitioningDelegate.h"
 
 @interface PTCWelcomeViewController ()
+
+@property (nonatomic, strong) id<UIViewControllerTransitioningDelegate> overlayTransitioningDelegate;
 
 @end
 
@@ -29,6 +32,15 @@
   // Do any additional setup after loading the view, typically from a nib.
   [self animateView:self.doNotPressLabel toHidden:YES];
   self.doNotPressLabel.hidden = NO;
+  self.overlayTransitioningDelegate = [PTCOverlayTransitioningDelegate new];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"dangerOverlay"]) {
+    UIViewController *destinationVC = segue.destinationViewController;
+    destinationVC.transitioningDelegate = self.overlayTransitioningDelegate;
+    destinationVC.modalPresentationStyle = UIModalPresentationCustom;
+  }
 }
 
 - (IBAction)handleDoNotPressPressed:(id)sender {
