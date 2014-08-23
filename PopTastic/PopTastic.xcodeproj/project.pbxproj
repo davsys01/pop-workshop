@@ -13,6 +13,7 @@
 		22F4040919A8F1AC001ECA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F4040719A8F1AC001ECA35 /* Main.storyboard */; };
 		22F4040B19A8F1AC001ECA35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4040A19A8F1AC001ECA35 /* Images.xcassets */; };
 		22F4041719A8F1AC001ECA35 /* PopTasticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4041619A8F1AC001ECA35 /* PopTasticTests.m */; };
+		22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4042219A8F3EC001ECA35 /* UIColor+ColorMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		22F4041019A8F1AC001ECA35 /* PopTasticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopTasticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F4041519A8F1AC001ECA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F4041619A8F1AC001ECA35 /* PopTasticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopTasticTests.m; sourceTree = "<group>"; };
+		22F4042119A8F3EC001ECA35 /* UIColor+ColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorMap.h"; sourceTree = "<group>"; };
+		22F4042219A8F3EC001ECA35 /* UIColor+ColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorMap.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 		22F403FC19A8F1AC001ECA35 /* PopTastic */ = {
 			isa = PBXGroup;
 			children = (
+				22F4042019A8F3C2001ECA35 /* Utilities */,
 				22F4040119A8F1AC001ECA35 /* AppDelegate.h */,
 				22F4040219A8F1AC001ECA35 /* AppDelegate.m */,
 				22F4040419A8F1AC001ECA35 /* ViewController.h */,
@@ -114,6 +118,15 @@
 				22F4041519A8F1AC001ECA35 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22F4042019A8F3C2001ECA35 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				22F4042119A8F3EC001ECA35 /* UIColor+ColorMap.h */,
+				22F4042219A8F3EC001ECA35 /* UIColor+ColorMap.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +230,7 @@
 			files = (
 				22F4040619A8F1AC001ECA35 /* ViewController.m in Sources */,
 				22F4040319A8F1AC001ECA35 /* AppDelegate.m in Sources */,
+				22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */,
 				22F4040019A8F1AC001ECA35 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
