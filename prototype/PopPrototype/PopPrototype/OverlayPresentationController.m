@@ -62,7 +62,8 @@
 
 - (void)containerViewWillLayoutSubviews {
   self.dimmingView.frame = self.containerView.bounds;
-  self.presentedView.frame = [self frameOfPresentedViewInContainerView];
+  CGRect finalFrame = [self frameOfPresentedViewInContainerView];
+  self.presentedView.bounds = CGRectMake(0, 0, finalFrame.size.width, finalFrame.size.height);
 }
 
 

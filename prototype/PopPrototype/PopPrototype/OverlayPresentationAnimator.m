@@ -36,7 +36,12 @@
     [transitionContext completeTransition:YES];
   }];
   
+  POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+  scaleAnimation.springBounciness = FBTweakValue(@"Overlay", @"Presentation", @"Bounciness", 15.0);
+  scaleAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.4, 0.6)];
+  
   [toView.layer pop_addAnimation:positionAnimation forKey:@"yPositionAnimation"];
+  [toView.layer pop_addAnimation:scaleAnimation forKey:@"scaleAnimation"];
 }
 
 @end
