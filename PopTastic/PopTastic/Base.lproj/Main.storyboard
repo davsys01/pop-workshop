@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Welcome View Controller-->
@@ -26,6 +27,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w16-ad-mfp">
                                 <rect key="frame" x="249" y="169" width="103" height="48"/>
@@ -53,12 +57,16 @@
                         <color key="backgroundColor" red="0.096164966173496111" green="0.59393159177868027" blue="0.78364158163265307" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Sai-c1-jZd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="37F-1q-L4x"/>
-                            <constraint firstItem="s7L-QY-XDJ" firstAttribute="top" secondItem="w16-ad-mfp" secondAttribute="bottom" constant="30" id="9pS-0M-Bah"/>
+                            <constraint firstItem="s7L-QY-XDJ" firstAttribute="top" secondItem="w16-ad-mfp" secondAttribute="bottom" constant="30" id="9pS-0M-Bah">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="Sai-c1-jZd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="FH0-jK-q1k"/>
                             <constraint firstAttribute="centerX" secondItem="w16-ad-mfp" secondAttribute="centerX" constant="-0.5" id="FKJ-w6-KGR"/>
                             <constraint firstAttribute="centerX" secondItem="s7L-QY-XDJ" secondAttribute="centerX" constant="-0.5" id="H6C-i6-3qS"/>
                             <constraint firstAttribute="trailing" secondItem="Sai-c1-jZd" secondAttribute="trailing" id="JSD-KN-ggv"/>
-                            <constraint firstItem="w16-ad-mfp" firstAttribute="top" secondItem="Sai-c1-jZd" secondAttribute="bottom" constant="80" id="O4o-Vr-sL0"/>
+                            <constraint firstItem="w16-ad-mfp" firstAttribute="top" secondItem="Sai-c1-jZd" secondAttribute="bottom" constant="80" id="O4o-Vr-sL0">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="xky-sb-Rjb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PPM-lh-AHI"/>
                             <constraint firstItem="xky-sb-Rjb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ghu-fM-gCg"/>
                             <constraint firstAttribute="bottom" secondItem="xky-sb-Rjb" secondAttribute="bottom" id="giz-bY-V5g"/>
@@ -91,6 +99,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVq-BV-PBU">
                                 <rect key="frame" x="251" y="532" width="94" height="48"/>
@@ -103,12 +114,37 @@
                                     <action selector="handleDismissButtonPressed:" destination="P6J-rW-hUi" eventType="touchUpInside" id="abZ-lc-r0D"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgu-Y1-c9V" customClass="PTCDangerIndicator">
+                                <rect key="frame" x="113.5" y="119" width="373" height="373"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tgu-Y1-c9V" secondAttribute="height" multiplier="1:1" id="0Xs-DX-j4V"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.44098753672409552" green="0.84555206472562883" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IO7-Yp-4E3" secondAttribute="trailing" id="1Bw-Ao-MUI"/>
-                            <constraint firstItem="7li-Bv-gnn" firstAttribute="top" secondItem="bVq-BV-PBU" secondAttribute="bottom" constant="20" id="ab7-WM-GiH"/>
+                            <constraint firstAttribute="centerX" secondItem="tgu-Y1-c9V" secondAttribute="centerX" id="GqN-yO-LyK"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="tgu-Y1-c9V" secondAttribute="width" priority="750" id="aTm-RR-cWr"/>
+                            <constraint firstItem="7li-Bv-gnn" firstAttribute="top" secondItem="bVq-BV-PBU" secondAttribute="bottom" constant="20" id="ab7-WM-GiH">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="tgu-Y1-c9V" firstAttribute="top" secondItem="IO7-Yp-4E3" secondAttribute="bottom" constant="30" id="fOj-8e-Wme">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="bVq-BV-PBU" secondAttribute="centerX" constant="1.5" id="i0B-BY-xvR"/>
+                            <constraint firstItem="bVq-BV-PBU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tgu-Y1-c9V" secondAttribute="bottom" constant="40" id="og3-9l-Vsx">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="IO7-Yp-4E3" firstAttribute="top" secondItem="GrS-yl-iDx" secondAttribute="top" id="sm7-A0-KDz"/>
                             <constraint firstItem="IO7-Yp-4E3" firstAttribute="leading" secondItem="GrS-yl-iDx" secondAttribute="leading" id="u79-QH-csC"/>
                         </constraints>
