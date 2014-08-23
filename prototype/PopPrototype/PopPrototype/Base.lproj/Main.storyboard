@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xwY-ly-6r8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="welcomeViewController" title="Welcome" id="vXZ-lx-hvc" customClass="WelcomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-MT-dy2" customClass="BlockButton">
+                                <rect key="frame" x="239" y="179" width="121" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.86195106580000003" blue="0.15694230179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="dismiss">
+                                    <color key="titleColor" red="0.22101389630000001" green="0.50662462070000003" blue="0.73999521680000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDismiss:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TSb-Vk-3aZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlQ-O9-AOb" customClass="BlockButton">
+                                <rect key="frame" x="215" y="483" width="170" height="58"/>
+                                <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="do not press">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleDoNotPress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E9E-j8-MGk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-AZ-0Wd">
+                                <rect key="frame" x="203" y="70" width="194" height="59"/>
+                                <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i said don't press it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKQ-3U-ADS">
+                                <rect key="frame" x="209" y="554" width="179" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33759016139999998" green="0.73422044320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rKQ-3U-ADS" firstAttribute="top" secondItem="tlQ-O9-AOb" secondAttribute="bottom" constant="13" id="7dN-xG-cqk"/>
+                            <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="kQY-AZ-0Wd" secondAttribute="centerX" id="9e2-Oc-ldL"/>
+                            <constraint firstItem="rKQ-3U-ADS" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-1" id="FYb-pI-cfy"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rKQ-3U-ADS" secondAttribute="bottom" constant="20" id="GCe-vS-60H"/>
+                            <constraint firstItem="FMK-MT-dy2" firstAttribute="centerX" secondItem="tlQ-O9-AOb" secondAttribute="centerX" constant="-0.5" id="RSD-i4-0s4"/>
+                            <constraint firstItem="kQY-AZ-0Wd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="TtY-7G-xmh"/>
+                            <constraint firstItem="FMK-MT-dy2" firstAttribute="top" secondItem="kQY-AZ-0Wd" secondAttribute="bottom" constant="50" id="YPD-w9-DJh"/>
+                            <constraint firstAttribute="centerX" secondItem="FMK-MT-dy2" secondAttribute="centerX" id="rWM-af-0fs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doNotPressButton" destination="tlQ-O9-AOb" id="Xth-n6-E02"/>
+                        <outlet property="doNotPressLabel" destination="rKQ-3U-ADS" id="dVG-lj-6DY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="245"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="8r6-mK-fVa">
+            <objects>
+                <viewController storyboardIdentifier="mainViewController" title="Main" id="xwY-ly-6r8" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="reM-zf-OaN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zu8-Yj-7fU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XNG-nM-we9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-Ms-aG0" customClass="BlockButton">
+                                <rect key="frame" x="232" y="292" width="136" height="58"/>
+                                <color key="backgroundColor" red="0.33759016139999998" green="0.73422044320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="welcome">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" identifier="displayWelcome" id="z7c-YJ-GuK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-c2-Qly" customClass="ProgressIndicator">
+                                <rect key="frame" x="235" y="28" width="131" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WgY-c2-Qly" secondAttribute="height" multiplier="1:1" id="sJ3-fD-OPs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG4-2Q-rxZ" customClass="BlockButton">
+                                <rect key="frame" x="216" y="196" width="168" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="randomise danger">
+                                    <color key="titleColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleRandomisePressed:" destination="xwY-ly-6r8" eventType="touchUpInside" id="lgm-nV-UbP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pG4-2Q-rxZ" firstAttribute="centerX" secondItem="X7P-Ms-aG0" secondAttribute="centerX" id="10L-za-Mox"/>
+                            <constraint firstItem="Zu8-Yj-7fU" firstAttribute="top" secondItem="X7P-Ms-aG0" secondAttribute="bottom" constant="250" id="8rZ-Bg-rIC"/>
+                            <constraint firstItem="X7P-Ms-aG0" firstAttribute="top" secondItem="pG4-2Q-rxZ" secondAttribute="bottom" constant="46" id="DWp-dz-WCH"/>
+                            <constraint firstItem="WgY-c2-Qly" firstAttribute="top" secondItem="reM-zf-OaN" secondAttribute="bottom" constant="8" id="EeQ-9n-7bd"/>
+                            <constraint firstItem="WgY-c2-Qly" firstAttribute="centerX" secondItem="pG4-2Q-rxZ" secondAttribute="centerX" constant="0.5" id="TbF-of-L7d"/>
+                            <constraint firstItem="pG4-2Q-rxZ" firstAttribute="top" secondItem="WgY-c2-Qly" secondAttribute="bottom" constant="37" id="cGg-dV-a7F"/>
+                            <constraint firstAttribute="centerX" secondItem="pG4-2Q-rxZ" secondAttribute="centerX" id="p0x-5t-LSk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressIndicator" destination="WgY-c2-Qly" id="XxX-OJ-2py"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJd-AK-kr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="245"/>
+        </scene>
+    </scenes>
+</document>
