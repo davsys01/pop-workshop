@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		225716EA19A8FA94006EBD62 /* PTCPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */; };
+		225716EE19A8FC0B006EBD62 /* PTCZoomableImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */; };
 		22F4040019A8F1AC001ECA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403FF19A8F1AC001ECA35 /* main.m */; };
 		22F4040319A8F1AC001ECA35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040219A8F1AC001ECA35 /* AppDelegate.m */; };
 		22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		225716E819A8FA94006EBD62 /* PTCPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCPopoverViewController.h; sourceTree = "<group>"; };
 		225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCPopoverViewController.m; sourceTree = "<group>"; };
+		225716EC19A8FC0B006EBD62 /* PTCZoomableImageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCZoomableImageCollection.h; sourceTree = "<group>"; };
+		225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCZoomableImageCollection.m; sourceTree = "<group>"; };
 		22F403FA19A8F1AC001ECA35 /* PopTastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F403FE19A8F1AC001ECA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F403FF19A8F1AC001ECA35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225716EB19A8FBF2006EBD62 /* ImageCollection */ = {
+			isa = PBXGroup;
+			children = (
+				225716EC19A8FC0B006EBD62 /* PTCZoomableImageCollection.h */,
+				225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */,
+			);
+			name = ImageCollection;
+			sourceTree = "<group>";
+		};
 		22F403F119A8F1AC001ECA35 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		22F403FC19A8F1AC001ECA35 /* PopTastic */ = {
 			isa = PBXGroup;
 			children = (
+				225716EB19A8FBF2006EBD62 /* ImageCollection */,
 				22F4042819A8FA3A001ECA35 /* View Controllers */,
 				22F4042419A8F740001ECA35 /* Views */,
 				22F4042019A8F3C2001ECA35 /* Utilities */,
@@ -261,6 +274,7 @@
 				22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */,
 				225716EA19A8FA94006EBD62 /* PTCPopoverViewController.m in Sources */,
 				22F4040019A8F1AC001ECA35 /* main.m in Sources */,
+				225716EE19A8FC0B006EBD62 /* PTCZoomableImageCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

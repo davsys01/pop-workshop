@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xky-sb-Rjb" customClass="PTCZoomableImageCollection">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sai-c1-jZd" customClass="PTCPaddedLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                 <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,6 +59,10 @@
                             <constraint firstAttribute="centerX" secondItem="s7L-QY-XDJ" secondAttribute="centerX" constant="-0.5" id="H6C-i6-3qS"/>
                             <constraint firstAttribute="trailing" secondItem="Sai-c1-jZd" secondAttribute="trailing" id="JSD-KN-ggv"/>
                             <constraint firstItem="w16-ad-mfp" firstAttribute="top" secondItem="Sai-c1-jZd" secondAttribute="bottom" constant="80" id="O4o-Vr-sL0"/>
+                            <constraint firstItem="xky-sb-Rjb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PPM-lh-AHI"/>
+                            <constraint firstItem="xky-sb-Rjb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ghu-fM-gCg"/>
+                            <constraint firstAttribute="bottom" secondItem="xky-sb-Rjb" secondAttribute="bottom" id="giz-bY-V5g"/>
+                            <constraint firstAttribute="trailing" secondItem="xky-sb-Rjb" secondAttribute="trailing" id="thW-cr-9x0"/>
                         </constraints>
                     </view>
                     <connections>
