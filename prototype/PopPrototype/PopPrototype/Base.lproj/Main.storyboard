@@ -107,15 +107,15 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                        <real key="value" value="0.90000000000000002"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG4-2Q-rxZ" customClass="BlockButton">
-                                <rect key="frame" x="241" y="196" width="118" height="50"/>
+                                <rect key="frame" x="216" y="196" width="168" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="randomise">
+                                <state key="normal" title="randomise danger">
                                     <color key="titleColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

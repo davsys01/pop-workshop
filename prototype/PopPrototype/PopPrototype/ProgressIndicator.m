@@ -9,6 +9,7 @@
 #import "ProgressIndicator.h"
 #import <POP/POP.h>
 #import <Tweaks/FBTweakInline.h>
+#import "UIColor+ColorMap.h"
 
 @interface ProgressIndicator ()
 
@@ -42,7 +43,7 @@
   [self.layer addSublayer:self.innerCircle];
   [self.layer addSublayer:self.trackLayer];
   self.innerCircle.lineWidth = 0.0;
-  self.innerCircle.fillColor = [UIColor redColor].CGColor;
+  self.innerCircle.fillColor = [UIColor colorForNormalisedValue:self.value].CGColor;
   self.trackLayer.lineWidth = 15.0;
   self.trackLayer.lineCap = @"round";
   self.trackLayer.strokeColor = [UIColor colorWithWhite:1.0 alpha:0.6].CGColor;
@@ -75,6 +76,8 @@
     trackAnimation.velocity = @(FBTweakValue(@"ProgressIndicator", @"Value Animation", @"Velocity", 10.0, 0.0, 20.0));
     trackAnimation.springBounciness = FBTweakValue(@"ProgressIndicator", @"Value Animation", @"Bounciness", 10.0, 0.0, 20.0);
     [self.trackLayer pop_addAnimation:trackAnimation forKey:@"strokeEnd"];
+    
+    self.innerCircle.fillColor = [UIColor colorForNormalisedValue:_value].CGColor;
   }
 }
 
