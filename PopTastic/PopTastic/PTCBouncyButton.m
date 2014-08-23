@@ -15,13 +15,49 @@
 //
 
 #import "PTCBouncyButton.h"
+#import <POP/POP.h>
 
 @implementation PTCBouncyButton
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if(self) {
+    [self configureButton];
+  }
+  return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+  self = [super initWithFrame:frame];
+  if(self) {
+    [self configureButton];
+  }
+  return self;
+}
 
 - (CGSize)intrinsicContentSize {
   CGSize size = [super intrinsicContentSize];
   size.width += 20.0;
   return size;
+}
+
+- (void)configureButton {
+  [self addTarget:self action:@selector(zoomOnPress) forControlEvents:UIControlEventTouchDown];
+  [self addTarget:self action:@selector(restoreZoom) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)zoomOnPress {
+  POPBasicAnimation *zoomAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+  zoomAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.1, 1.1)];
+  [self.layer pop_addAnimation:zoomAnimation forKey:@"zoomAnimation"];
+}
+
+- (void)restoreZoom {
+  POPSpringAnimation *zoomAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+  zoomAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.0, 1.0)];
+  zoomAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(-5.0, -5.0)];
+  zoomAnimation.springBounciness = 15.0;
+  [self.layer pop_addAnimation:zoomAnimation forKey:@"restoreAnimation"];
 }
 
 @end
