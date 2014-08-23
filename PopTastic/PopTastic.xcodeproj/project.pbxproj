@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225716EA19A8FA94006EBD62 /* PTCPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */; };
 		22F4040019A8F1AC001ECA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403FF19A8F1AC001ECA35 /* main.m */; };
 		22F4040319A8F1AC001ECA35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040219A8F1AC001ECA35 /* AppDelegate.m */; };
-		22F4040619A8F1AC001ECA35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040519A8F1AC001ECA35 /* ViewController.m */; };
+		22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */; };
 		22F4040919A8F1AC001ECA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F4040719A8F1AC001ECA35 /* Main.storyboard */; };
 		22F4040B19A8F1AC001ECA35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4040A19A8F1AC001ECA35 /* Images.xcassets */; };
 		22F4041719A8F1AC001ECA35 /* PopTasticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4041619A8F1AC001ECA35 /* PopTasticTests.m */; };
 		22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4042219A8F3EC001ECA35 /* UIColor+ColorMap.m */; };
+		22F4042719A8F76C001ECA35 /* PTCPaddedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4042619A8F76C001ECA35 /* PTCPaddedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,13 +29,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		225716E819A8FA94006EBD62 /* PTCPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCPopoverViewController.h; sourceTree = "<group>"; };
+		225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCPopoverViewController.m; sourceTree = "<group>"; };
 		22F403FA19A8F1AC001ECA35 /* PopTastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F403FE19A8F1AC001ECA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F403FF19A8F1AC001ECA35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22F4040119A8F1AC001ECA35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22F4040219A8F1AC001ECA35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		22F4040419A8F1AC001ECA35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		22F4040519A8F1AC001ECA35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		22F4040419A8F1AC001ECA35 /* PTCWelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCWelcomeViewController.h; sourceTree = "<group>"; };
+		22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCWelcomeViewController.m; sourceTree = "<group>"; };
 		22F4040819A8F1AC001ECA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22F4040A19A8F1AC001ECA35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22F4041019A8F1AC001ECA35 /* PopTasticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopTasticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +45,8 @@
 		22F4041619A8F1AC001ECA35 /* PopTasticTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopTasticTests.m; sourceTree = "<group>"; };
 		22F4042119A8F3EC001ECA35 /* UIColor+ColorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorMap.h"; sourceTree = "<group>"; };
 		22F4042219A8F3EC001ECA35 /* UIColor+ColorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorMap.m"; sourceTree = "<group>"; };
+		22F4042519A8F76C001ECA35 /* PTCPaddedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCPaddedLabel.h; sourceTree = "<group>"; };
+		22F4042619A8F76C001ECA35 /* PTCPaddedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCPaddedLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +88,11 @@
 		22F403FC19A8F1AC001ECA35 /* PopTastic */ = {
 			isa = PBXGroup;
 			children = (
+				22F4042819A8FA3A001ECA35 /* View Controllers */,
+				22F4042419A8F740001ECA35 /* Views */,
 				22F4042019A8F3C2001ECA35 /* Utilities */,
 				22F4040119A8F1AC001ECA35 /* AppDelegate.h */,
 				22F4040219A8F1AC001ECA35 /* AppDelegate.m */,
-				22F4040419A8F1AC001ECA35 /* ViewController.h */,
-				22F4040519A8F1AC001ECA35 /* ViewController.m */,
 				22F4040719A8F1AC001ECA35 /* Main.storyboard */,
 				22F4040A19A8F1AC001ECA35 /* Images.xcassets */,
 				22F403FD19A8F1AC001ECA35 /* Supporting Files */,
@@ -127,6 +133,26 @@
 				22F4042219A8F3EC001ECA35 /* UIColor+ColorMap.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		22F4042419A8F740001ECA35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22F4042519A8F76C001ECA35 /* PTCPaddedLabel.h */,
+				22F4042619A8F76C001ECA35 /* PTCPaddedLabel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		22F4042819A8FA3A001ECA35 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22F4040419A8F1AC001ECA35 /* PTCWelcomeViewController.h */,
+				22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */,
+				225716E819A8FA94006EBD62 /* PTCPopoverViewController.h */,
+				225716E919A8FA94006EBD62 /* PTCPopoverViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +199,7 @@
 		22F403F219A8F1AC001ECA35 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PTC;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = ShinobiControls;
 				TargetAttributes = {
@@ -228,9 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F4040619A8F1AC001ECA35 /* ViewController.m in Sources */,
+				22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */,
 				22F4040319A8F1AC001ECA35 /* AppDelegate.m in Sources */,
+				22F4042719A8F76C001ECA35 /* PTCPaddedLabel.m in Sources */,
 				22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */,
+				225716EA19A8FA94006EBD62 /* PTCPopoverViewController.m in Sources */,
 				22F4040019A8F1AC001ECA35 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +445,7 @@
 				22F4041C19A8F1AC001ECA35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22F4041D19A8F1AC001ECA35 /* Build configuration list for PBXNativeTarget "PopTasticTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +454,7 @@
 				22F4041F19A8F1AC001ECA35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

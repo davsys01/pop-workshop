@@ -14,10 +14,20 @@
 // limitations under the License.
 //
 
-@import UIKit;
+#import "PTCWelcomeViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface PTCWelcomeViewController ()
 
 @end
 
+@implementation PTCWelcomeViewController
+            
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)handleDoNotPressPressed:(id)sender {
+}
+
+@end
