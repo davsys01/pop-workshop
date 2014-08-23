@@ -72,7 +72,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="P6J-rW-hUi" kind="custom" id="Cra-l2-pwg"/>
+                                    <segue destination="P6J-rW-hUi" kind="presentation" id="Cra-l2-pwg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7L-QY-XDJ">
