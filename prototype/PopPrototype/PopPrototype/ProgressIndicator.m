@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) CAShapeLayer *trackLayer;
 @property (nonatomic, strong) CAShapeLayer *innerCircle;
+@property (nonatomic, strong) POPAnimatableProperty *mappedColorProperty;
 
 @end
 
@@ -24,6 +25,7 @@
   self = [super initWithCoder:aDecoder];
   if(self) {
     [self createLayers];
+    [self createAnimatableProperty];
   }
   return self;
 }
@@ -32,6 +34,7 @@
   self = [super initWithFrame:frame];
   if(self) {
     [self createLayers];
+    [self createAnimatableProperty];
   }
   return self;
 }
@@ -44,10 +47,30 @@
   [self.layer addSublayer:self.trackLayer];
   self.innerCircle.lineWidth = 0.0;
   self.innerCircle.fillColor = [UIColor colorForNormalisedValue:self.value].CGColor;
+  [self.innerCircle setValue:@(self.value) forKey:@"dangerLevel"];
   self.trackLayer.lineWidth = 15.0;
   self.trackLayer.lineCap = @"round";
   self.trackLayer.strokeColor = [UIColor colorWithWhite:1.0 alpha:0.6].CGColor;
   self.trackLayer.fillColor = [UIColor clearColor].CGColor;
+}
+
+- (void)createAnimatableProperty {
+  self.mappedColorProperty = [POPAnimatableProperty propertyWithName:@"com.popprototype.progressindicator.mappedcolor"
+             initializer:^(POPMutableAnimatableProperty *prop) {
+               // Read Value
+               prop.readBlock = ^(CAShapeLayer *layer, CGFloat values[]) {
+                 values[0] = [[layer valueForKey:@"dangerLevel"] floatValue];
+               };
+               
+               // Write Value
+               prop.writeBlock = ^(CAShapeLayer *layer, const CGFloat values[]) {
+                 [layer setValue:@(values[0]) forKey:@"dangerLevel"];
+                 layer.fillColor = [UIColor colorForNormalisedValue:values[0]].CGColor;
+               };
+               
+               // Threshold
+               prop.threshold = 0.01;
+             }];
 }
 
 - (void)layoutSubviews {
@@ -77,7 +100,11 @@
     trackAnimation.springBounciness = FBTweakValue(@"ProgressIndicator", @"Value Animation", @"Bounciness", 10.0, 0.0, 20.0);
     [self.trackLayer pop_addAnimation:trackAnimation forKey:@"strokeEnd"];
     
-    self.innerCircle.fillColor = [UIColor colorForNormalisedValue:_value].CGColor;
+    POPBasicAnimation *colorAnimation = [POPBasicAnimation animation];
+    colorAnimation.duration = FBTweakValue(@"ProgressIndicator", @"Value Animation", @"Color Duration", 0.4, 0.1, 2.0);
+    colorAnimation.property = self.mappedColorProperty;
+    colorAnimation.toValue = @(_value);
+    [self.innerCircle pop_addAnimation:colorAnimation forKey:@"colorAnimation"];
   }
 }
 
