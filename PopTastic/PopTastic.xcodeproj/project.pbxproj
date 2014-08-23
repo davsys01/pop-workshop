@@ -11,7 +11,7 @@
 		225716EE19A8FC0B006EBD62 /* PTCZoomableImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */; };
 		22850F6619A904FE00C60CD4 /* PTCDangerIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F6519A904FE00C60CD4 /* PTCDangerIndicator.m */; };
 		22F4040019A8F1AC001ECA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403FF19A8F1AC001ECA35 /* main.m */; };
-		22F4040319A8F1AC001ECA35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040219A8F1AC001ECA35 /* AppDelegate.m */; };
+		22F4040319A8F1AC001ECA35 /* PTCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040219A8F1AC001ECA35 /* PTCAppDelegate.m */; };
 		22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */; };
 		22F4040919A8F1AC001ECA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F4040719A8F1AC001ECA35 /* Main.storyboard */; };
 		22F4040B19A8F1AC001ECA35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4040A19A8F1AC001ECA35 /* Images.xcassets */; };
@@ -40,8 +40,8 @@
 		22F403FA19A8F1AC001ECA35 /* PopTastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F403FE19A8F1AC001ECA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F403FF19A8F1AC001ECA35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22F4040119A8F1AC001ECA35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		22F4040219A8F1AC001ECA35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22F4040119A8F1AC001ECA35 /* PTCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCAppDelegate.h; sourceTree = "<group>"; };
+		22F4040219A8F1AC001ECA35 /* PTCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCAppDelegate.m; sourceTree = "<group>"; };
 		22F4040419A8F1AC001ECA35 /* PTCWelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTCWelcomeViewController.h; sourceTree = "<group>"; };
 		22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTCWelcomeViewController.m; sourceTree = "<group>"; };
 		22F4040819A8F1AC001ECA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 				22F4042819A8FA3A001ECA35 /* View Controllers */,
 				22F4042419A8F740001ECA35 /* Views */,
 				22F4042019A8F3C2001ECA35 /* Utilities */,
-				22F4040119A8F1AC001ECA35 /* AppDelegate.h */,
-				22F4040219A8F1AC001ECA35 /* AppDelegate.m */,
+				22F4040119A8F1AC001ECA35 /* PTCAppDelegate.h */,
+				22F4040219A8F1AC001ECA35 /* PTCAppDelegate.m */,
 				22F4040719A8F1AC001ECA35 /* Main.storyboard */,
 				22F4040A19A8F1AC001ECA35 /* Images.xcassets */,
 				22F403FD19A8F1AC001ECA35 /* Supporting Files */,
@@ -274,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */,
-				22F4040319A8F1AC001ECA35 /* AppDelegate.m in Sources */,
+				22F4040319A8F1AC001ECA35 /* PTCAppDelegate.m in Sources */,
 				22F4042719A8F76C001ECA35 /* PTCPaddedLabel.m in Sources */,
 				22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */,
 				22850F6619A904FE00C60CD4 /* PTCDangerIndicator.m in Sources */,

@@ -14,13 +14,13 @@
 // limitations under the License.
 //
 
-#import "AppDelegate.h"
+#import "PTCAppDelegate.h"
 
-@interface AppDelegate ()
+@interface PTCAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation PTCAppDelegate
             
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.

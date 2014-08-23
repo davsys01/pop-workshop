@@ -16,10 +16,9 @@
 
 @import UIKit;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface PTCAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 
 @end
 
