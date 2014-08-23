@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xwY-ly-6r8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Welcome-->
@@ -87,12 +88,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="main" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztB-SI-A7N">
-                                <rect key="frame" x="257" y="204" width="85.5" height="48.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="41"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7P-Ms-aG0" customClass="BlockButton">
                                 <rect key="frame" x="232" y="292" width="136" height="58"/>
                                 <color key="backgroundColor" red="0.33759016139999998" green="0.73422044320000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,15 +100,44 @@
                                     <segue destination="vXZ-lx-hvc" kind="presentation" identifier="displayWelcome" id="z7c-YJ-GuK"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-c2-Qly" customClass="ProgressIndicator">
+                                <rect key="frame" x="235" y="28" width="131" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WgY-c2-Qly" secondAttribute="height" multiplier="1:1" id="sJ3-fD-OPs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.90000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG4-2Q-rxZ" customClass="BlockButton">
+                                <rect key="frame" x="241" y="196" width="118" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.40880908059999999" blue="0.43474535409999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="randomise">
+                                    <color key="titleColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleRandomisePressed:" destination="xwY-ly-6r8" eventType="touchUpInside" id="lgm-nV-UbP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.08457289388" green="0.48424572059999998" blue="0.63366948339999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="pG4-2Q-rxZ" firstAttribute="centerX" secondItem="X7P-Ms-aG0" secondAttribute="centerX" id="10L-za-Mox"/>
                             <constraint firstItem="Zu8-Yj-7fU" firstAttribute="top" secondItem="X7P-Ms-aG0" secondAttribute="bottom" constant="250" id="8rZ-Bg-rIC"/>
-                            <constraint firstItem="X7P-Ms-aG0" firstAttribute="top" secondItem="ztB-SI-A7N" secondAttribute="bottom" constant="40" id="NQ2-bJ-X0s"/>
-                            <constraint firstAttribute="centerX" secondItem="ztB-SI-A7N" secondAttribute="centerX" id="fgw-tY-mcp"/>
-                            <constraint firstItem="ztB-SI-A7N" firstAttribute="centerX" secondItem="X7P-Ms-aG0" secondAttribute="centerX" id="yLa-ou-pON"/>
+                            <constraint firstItem="X7P-Ms-aG0" firstAttribute="top" secondItem="pG4-2Q-rxZ" secondAttribute="bottom" constant="46" id="DWp-dz-WCH"/>
+                            <constraint firstItem="WgY-c2-Qly" firstAttribute="top" secondItem="reM-zf-OaN" secondAttribute="bottom" constant="8" id="EeQ-9n-7bd"/>
+                            <constraint firstItem="WgY-c2-Qly" firstAttribute="centerX" secondItem="pG4-2Q-rxZ" secondAttribute="centerX" constant="0.5" id="TbF-of-L7d"/>
+                            <constraint firstItem="pG4-2Q-rxZ" firstAttribute="top" secondItem="WgY-c2-Qly" secondAttribute="bottom" constant="37" id="cGg-dV-a7F"/>
+                            <constraint firstAttribute="centerX" secondItem="pG4-2Q-rxZ" secondAttribute="centerX" id="p0x-5t-LSk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressIndicator" destination="WgY-c2-Qly" id="XxX-OJ-2py"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJd-AK-kr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

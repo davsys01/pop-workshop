@@ -7,9 +7,12 @@
 //
 
 @import UIKit;
+#import "ProgressIndicator.h"
 
 @interface MainViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UICollectionView *photoCollectionView;
+@property (weak, nonatomic) IBOutlet ProgressIndicator *progressIndicator;
+
+- (IBAction)handleRandomisePressed:(id)sender;
 
 @end

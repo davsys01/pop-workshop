@@ -23,6 +23,8 @@
   [super viewDidLoad];
   self.transitioningDelegate = [OverlayTransitioningDelegate new];
   [self createZoomableImageCollection];
+  // Seed the random number generator
+  srand48(time(0));
 }
 
 
@@ -55,6 +57,13 @@
   [NSLayoutConstraint activateConstraints:hConstraints];
   
   self.zoomableImageCollection.translatesAutoresizingMaskIntoConstraints = NO;
+}
+
+
+
+- (IBAction)handleRandomisePressed:(id)sender {
+  double r = drand48();
+  self.progressIndicator.value = r;
 }
 
 @end
