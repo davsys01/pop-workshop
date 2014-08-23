@@ -41,16 +41,16 @@
 }
 
 - (void)toggleZoom {
-  [self toggleZoomWithVerticalVelocity:0];
+  [self toggleZoomWithVerticalVelocity:CGPointZero];
 }
 
-- (void)toggleZoomWithVerticalVelocity:(CGFloat)velocity {
+- (void)toggleZoomWithVerticalVelocity:(CGPoint)velocity {
   [self.superview bringSubviewToFront:self];
   CGRect newFrame = self.zoomed ? self.baseFrame : self.superview.bounds;
   POPSpringAnimation *frameAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
   frameAnimation.toValue = [NSValue valueWithCGRect:newFrame];
-  frameAnimation.springBounciness = 10.0;
-  frameAnimation.velocity = [NSValue valueWithCGRect:CGRectMake(0, velocity, 0, velocity)];
+  frameAnimation.springBounciness = 6.0;
+  frameAnimation.velocity = [NSValue valueWithCGRect:CGRectMake(velocity.x, velocity.y, velocity.x, velocity.y)];
   self.zoomed = !self.zoomed;
   [self pop_addAnimation:frameAnimation forKey:@"frameAnimation"];
 }
@@ -58,8 +58,27 @@
 - (void)dragImage:(UIPanGestureRecognizer *)gesture {
   if (gesture.state == UIGestureRecognizerStateChanged) {
     CGPoint offset = [gesture translationInView:self];
+    CGFloat proportionComplete = MIN(1.0, ABS(offset.y / self.superview.bounds.size.height * 2.0));
+    CGRect diff = CGRectMake(proportionComplete * (self.baseFrame.origin.x - self.superview.bounds.origin.x),
+                             proportionComplete * (self.baseFrame.origin.y - self.superview.bounds.origin.y),
+                             proportionComplete * (self.baseFrame.size.width - self.superview.bounds.size.width),
+                             proportionComplete * (self.baseFrame.size.height - self.superview.bounds.size.height));
+    CGRect intermediateFrame;
+    if (self.zoomed) {
+      intermediateFrame = CGRectMake(self.superview.bounds.origin.x + diff.origin.x,
+                                     self.superview.bounds.origin.y + diff.origin.y,
+                                     self.superview.bounds.size.width + diff.size.width,
+                                     self.superview.bounds.size.height + diff.size.height);
+    } else {
+      intermediateFrame = CGRectMake(self.baseFrame.origin.x - diff.origin.x,
+                                     self.baseFrame.origin.y - diff.origin.y,
+                                     self.baseFrame.size.width - diff.size.width,
+                                     self.baseFrame.size.height - diff.size.height);
+    }
+    self.frame = intermediateFrame;
+    
   } else if (gesture.state == UIGestureRecognizerStateEnded) {
-    [self toggleZoomWithVerticalVelocity:[gesture velocityInView:self].y];
+    [self toggleZoomWithVerticalVelocity:[gesture velocityInView:self]];
   }
 }
 
