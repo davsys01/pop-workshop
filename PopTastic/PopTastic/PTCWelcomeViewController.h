@@ -19,9 +19,9 @@
 @interface PTCWelcomeViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *doNotPressButton;
+@property (weak, nonatomic) IBOutlet UILabel *doNotPressLabel;
 
 - (IBAction)handleDoNotPressPressed:(id)sender;
-
 
 @end
 

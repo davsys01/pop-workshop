@@ -19,7 +19,40 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xky-sb-Rjb" customClass="PTCZoomableImageCollection">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ym4-7e-Tqg">
+                                        <rect key="frame" x="166.5" y="300" width="267.5" height="39.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="i said ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="33" name="HelveticaNeue-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="don't">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="33" name="HelveticaNeue-Medium"/>
+                                                    <font key="NSOriginalFont" size="33" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" press it">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="33" name="HelveticaNeue-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="ym4-7e-Tqg" secondAttribute="centerX" id="1zb-OZ-agq"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sai-c1-jZd" customClass="PTCPaddedLabel">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
@@ -68,6 +101,7 @@
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstItem="xky-sb-Rjb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PPM-lh-AHI"/>
+                            <constraint firstItem="ym4-7e-Tqg" firstAttribute="top" secondItem="s7L-QY-XDJ" secondAttribute="bottom" constant="5" id="ag5-dK-Pb3"/>
                             <constraint firstItem="xky-sb-Rjb" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ghu-fM-gCg"/>
                             <constraint firstAttribute="bottom" secondItem="xky-sb-Rjb" secondAttribute="bottom" id="giz-bY-V5g"/>
                             <constraint firstAttribute="trailing" secondItem="xky-sb-Rjb" secondAttribute="trailing" id="thW-cr-9x0"/>
@@ -75,6 +109,7 @@
                     </view>
                     <connections>
                         <outlet property="doNotPressButton" destination="s7L-QY-XDJ" id="MbZ-Q6-OZs"/>
+                        <outlet property="doNotPressLabel" destination="ym4-7e-Tqg" id="Gji-e8-CKX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
