@@ -16,9 +16,10 @@
 
 @import UIKit;
 
+IB_DESIGNABLE
 @interface PTCDangerIndicator : UIView
 
-@property (nonatomic, assign) CGFloat value;
-@property (nonatomic, assign) CGFloat trackWidth;
+@property (nonatomic, assign) IBInspectable CGFloat value;
+@property (nonatomic, assign) IBInspectable CGFloat trackWidth;
 
 @end

@@ -15,6 +15,8 @@
 //
 
 #import "PTCDangerIndicator.h"
+#import <pop/POP.h>
+#import <Tweaks/FBTweakInline.h>
 
 @interface PTCDangerIndicator ()
 
@@ -64,7 +66,11 @@
 - (void)setValue:(CGFloat)value {
   if(value != _value) {
     _value = MIN(MAX(0.0, value), 1.0);
-    self.trackLayer.strokeEnd = _value;
+    POPSpringAnimation *trackAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
+    trackAnimation.toValue = @(_value);
+    trackAnimation.velocity = @(FBTweakValue(@"Danger Indicator", @"Value Animation", @"Velocity", 10.0, 0.0, 20.0));
+    trackAnimation.springBounciness = FBTweakValue(@"Danger Indicator", @"Value Animation", @"Bounciness", 10.0, 0.0, 20.0);
+    [self.trackLayer pop_addAnimation:trackAnimation forKey:@"strokeEnd"];
   }
 }
 
