@@ -15,6 +15,7 @@
 		22850F7C19A97B2100C60CD4 /* PTCGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F7B19A97B2100C60CD4 /* PTCGeometryUtils.m */; };
 		22850F7F19A9800700C60CD4 /* PTCBouncyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F7E19A9800700C60CD4 /* PTCBouncyButton.m */; };
 		22850F8219A9810800C60CD4 /* PTCOverlayPresentationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F8119A9810800C60CD4 /* PTCOverlayPresentationAnimator.m */; };
+		22850F8519A9815D00C60CD4 /* PTCZoomableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F8419A9815D00C60CD4 /* PTCZoomableImageView.m */; };
 		22F4040019A8F1AC001ECA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403FF19A8F1AC001ECA35 /* main.m */; };
 		22F4040319A8F1AC001ECA35 /* PTCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040219A8F1AC001ECA35 /* PTCAppDelegate.m */; };
 		22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */; };
@@ -53,6 +54,8 @@
 		22850F7E19A9800700C60CD4 /* PTCBouncyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCBouncyButton.m; sourceTree = "<group>"; };
 		22850F8019A9810800C60CD4 /* PTCOverlayPresentationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCOverlayPresentationAnimator.h; sourceTree = "<group>"; };
 		22850F8119A9810800C60CD4 /* PTCOverlayPresentationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCOverlayPresentationAnimator.m; sourceTree = "<group>"; };
+		22850F8319A9815D00C60CD4 /* PTCZoomableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCZoomableImageView.h; sourceTree = "<group>"; };
+		22850F8419A9815D00C60CD4 /* PTCZoomableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCZoomableImageView.m; sourceTree = "<group>"; };
 		22F403FA19A8F1AC001ECA35 /* PopTastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F403FE19A8F1AC001ECA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F403FF19A8F1AC001ECA35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 		225716EB19A8FBF2006EBD62 /* ImageCollection */ = {
 			isa = PBXGroup;
 			children = (
+				22850F8319A9815D00C60CD4 /* PTCZoomableImageView.h */,
+				22850F8419A9815D00C60CD4 /* PTCZoomableImageView.m */,
 				225716EC19A8FC0B006EBD62 /* PTCZoomableImageCollection.h */,
 				225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */,
 			);
@@ -358,6 +363,7 @@
 				22850F7C19A97B2100C60CD4 /* PTCGeometryUtils.m in Sources */,
 				22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */,
 				22F4040319A8F1AC001ECA35 /* PTCAppDelegate.m in Sources */,
+				22850F8519A9815D00C60CD4 /* PTCZoomableImageView.m in Sources */,
 				22850F7F19A9800700C60CD4 /* PTCBouncyButton.m in Sources */,
 				22F4042719A8F76C001ECA35 /* PTCPaddedLabel.m in Sources */,
 				22850F7019A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.m in Sources */,

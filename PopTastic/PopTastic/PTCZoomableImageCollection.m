@@ -15,6 +15,7 @@
 //
 
 #import "PTCZoomableImageCollection.h"
+#import "PTCZoomableImageView.h"
 
 @interface PTCZoomableImageCollection ()
 
@@ -80,8 +81,8 @@
     
     CGFloat width = self.bounds.size.width / self.images.count;
     CGFloat yValue = self.bounds.size.height - self.imageHeight;
-    [self.imageViews enumerateObjectsUsingBlock:^(UIImageView *iv, NSUInteger idx, BOOL *stop) {
-      iv.frame = CGRectMake(idx * width, yValue, width, self.imageHeight);
+    [self.imageViews enumerateObjectsUsingBlock:^(PTCZoomableImageView *iv, NSUInteger idx, BOOL *stop) {
+      iv.baseFrame = CGRectMake(idx * width, yValue, width, self.imageHeight);
     }];
   }
 }
@@ -91,7 +92,7 @@
   CGFloat width = self.bounds.size.width / self.images.count;
   CGFloat yValue = self.bounds.size.height - self.imageHeight;
   for (int i=0; i < self.images.count; i++) {
-    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(i * width, yValue, width, self.imageHeight)];
+    PTCZoomableImageView *iv = [[PTCZoomableImageView alloc] initWithFrame:CGRectMake(i * width, yValue, width, self.imageHeight)];
     iv.contentMode = UIViewContentModeScaleAspectFill;
     iv.image = self.images[i];
     iv.clipsToBounds = YES;
