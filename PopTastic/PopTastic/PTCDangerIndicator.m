@@ -17,11 +17,13 @@
 #import "PTCDangerIndicator.h"
 #import <pop/POP.h>
 #import <Tweaks/FBTweakInline.h>
+#import "UIColor+ColorMap.h"
 
 @interface PTCDangerIndicator ()
 
 @property (nonatomic, strong) CAShapeLayer *trackLayer;
 @property (nonatomic, strong) CAShapeLayer *innerCircle;
+@property (nonatomic, strong) POPAnimatableProperty *mappedColorProperty;
 
 @end
 
@@ -31,6 +33,7 @@
   self = [super initWithCoder:aDecoder];
   if(self) {
     [self createLayers];
+    [self createAnimatableProperty];
   }
   return self;
 }
@@ -39,6 +42,7 @@
   self = [super initWithFrame:frame];
   if(self) {
     [self createLayers];
+    [self createAnimatableProperty];
   }
   return self;
 }
@@ -71,6 +75,12 @@
     trackAnimation.velocity = @(FBTweakValue(@"Danger Indicator", @"Value Animation", @"Velocity", 10.0, 0.0, 20.0));
     trackAnimation.springBounciness = FBTweakValue(@"Danger Indicator", @"Value Animation", @"Bounciness", 10.0, 0.0, 20.0);
     [self.trackLayer pop_addAnimation:trackAnimation forKey:@"strokeEnd"];
+    
+    POPBasicAnimation *colorAnimation = [POPBasicAnimation animation];
+    colorAnimation.duration = FBTweakValue(@"Danger Indicator", @"Value Animation", @"Color Duration", 0.4, 0.1, 2.0);
+    colorAnimation.property = self.mappedColorProperty;
+    colorAnimation.toValue = @(_value);
+    [self.innerCircle pop_addAnimation:colorAnimation forKey:@"colorAnimation"];
   }
 }
 
@@ -89,7 +99,8 @@
   
   self.innerCircle = [CAShapeLayer layer];
   self.innerCircle.lineWidth = 0.0;
-  self.innerCircle.fillColor = [UIColor redColor].CGColor;
+  self.innerCircle.fillColor = [UIColor colorForNormalisedValue:self.value].CGColor;
+  [self.innerCircle setValue:@(self.value) forKey:@"dangerLevel"];
   
   self.trackLayer = [CAShapeLayer layer];
   self.trackLayer.lineWidth = self.trackWidth;
@@ -99,6 +110,25 @@
   
   [self.layer addSublayer:self.innerCircle];
   [self.layer addSublayer:self.trackLayer];
+}
+
+- (void)createAnimatableProperty {
+  self.mappedColorProperty = [POPAnimatableProperty propertyWithName:@"com.poptastic.dangerindicator.mappedcolor"
+       initializer:^(POPMutableAnimatableProperty *prop) {
+         // Read Value
+         prop.readBlock = ^(CAShapeLayer *layer, CGFloat values[]) {
+           values[0] = [[layer valueForKey:@"dangerLevel"] floatValue];
+         };
+         
+         // Write Value
+         prop.writeBlock = ^(CAShapeLayer *layer, const CGFloat values[]) {
+           [layer setValue:@(values[0]) forKey:@"dangerLevel"];
+           layer.fillColor = [UIColor colorForNormalisedValue:values[0]].CGColor;
+         };
+         
+         // Threshold
+         prop.threshold = 0.01;
+       }];
 }
 
 
