@@ -16,6 +16,7 @@
 
 #import "PTCZoomableImageView.h"
 #import <POP/POP.h>
+#import "PTCGeometryUtils.h"
 
 @interface PTCZoomableImageView ()
 
@@ -33,17 +34,23 @@
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleZoom)];
     [self addGestureRecognizer:tapGesture];
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragImage:)];
+    [self addGestureRecognizer:panGesture];
   }
   return self;
 }
 
 - (void)toggleZoom {
+  [self toggleZoomWithVelocity:CGPointZero];
+}
+
+- (void)toggleZoomWithVelocity:(CGPoint)velocity {
   [self.superview bringSubviewToFront:self];
   CGRect newFrame = self.zoomed ? self.baseFrame : self.superview.bounds;
   POPSpringAnimation *frameAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
   frameAnimation.toValue = [NSValue valueWithCGRect:newFrame];
   frameAnimation.springBounciness = 6.0;
-  frameAnimation.velocity = [NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)];
+  frameAnimation.velocity = [NSValue valueWithCGRect:CGRectMake(velocity.x, velocity.y, velocity.x, velocity.y)];
   self.zoomed = !self.zoomed;
   [self pop_addAnimation:frameAnimation forKey:@"frameAnimation"];
 }
@@ -54,6 +61,23 @@
     if(!self.zoomed) {
       self.frame = baseFrame;
     }
+  }
+}
+
+- (void)dragImage:(UIPanGestureRecognizer *)gesture {
+  [self.superview bringSubviewToFront:self];
+  if (gesture.state == UIGestureRecognizerStateChanged) {
+    CGPoint offset = [gesture translationInView:self];
+    CGFloat proportionComplete = MIN(1.0, ABS(offset.y / self.superview.bounds.size.height * 2.0));
+    if(self.zoomed) {
+      proportionComplete = 1 - proportionComplete;
+    }
+    self.frame = [PTCGeometryUtils interpolateBetweenRect:self.baseFrame
+                                                  andRect:self.superview.bounds
+                                           withProportion:proportionComplete];
+    
+  } else if (gesture.state == UIGestureRecognizerStateEnded) {
+    [self toggleZoomWithVelocity:[gesture velocityInView:self]];
   }
 }
 
