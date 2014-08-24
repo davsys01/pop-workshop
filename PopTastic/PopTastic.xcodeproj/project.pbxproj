@@ -10,11 +10,11 @@
 		225716EA19A8FA94006EBD62 /* PTCDangerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716E919A8FA94006EBD62 /* PTCDangerViewController.m */; };
 		225716EE19A8FC0B006EBD62 /* PTCZoomableImageCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */; };
 		22850F6619A904FE00C60CD4 /* PTCDangerIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F6519A904FE00C60CD4 /* PTCDangerIndicator.m */; };
-		22850F7C19A97B2100C60CD4 /* PTCGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F7B19A97B2100C60CD4 /* PTCGeometryUtils.m */; };
-		22850F7F19A9800700C60CD4 /* PTCBouncyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F7E19A9800700C60CD4 /* PTCBouncyButton.m */; };
-		22850F6919A9427C00C60CD4 /* PTCBouncyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F6819A9427C00C60CD4 /* PTCBouncyButton.m */; };
 		22850F6D19A957C200C60CD4 /* PTCOverlayPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F6C19A957C200C60CD4 /* PTCOverlayPresentationController.m */; };
 		22850F7019A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F6F19A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.m */; };
+		22850F7C19A97B2100C60CD4 /* PTCGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F7B19A97B2100C60CD4 /* PTCGeometryUtils.m */; };
+		22850F7F19A9800700C60CD4 /* PTCBouncyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F7E19A9800700C60CD4 /* PTCBouncyButton.m */; };
+		22850F8219A9810800C60CD4 /* PTCOverlayPresentationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22850F8119A9810800C60CD4 /* PTCOverlayPresentationAnimator.m */; };
 		22F4040019A8F1AC001ECA35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F403FF19A8F1AC001ECA35 /* main.m */; };
 		22F4040319A8F1AC001ECA35 /* PTCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040219A8F1AC001ECA35 /* PTCAppDelegate.m */; };
 		22F4040619A8F1AC001ECA35 /* PTCWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F4040519A8F1AC001ECA35 /* PTCWelcomeViewController.m */; };
@@ -43,16 +43,16 @@
 		225716ED19A8FC0B006EBD62 /* PTCZoomableImageCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCZoomableImageCollection.m; sourceTree = "<group>"; };
 		22850F6419A904FE00C60CD4 /* PTCDangerIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCDangerIndicator.h; sourceTree = "<group>"; };
 		22850F6519A904FE00C60CD4 /* PTCDangerIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCDangerIndicator.m; sourceTree = "<group>"; };
-		22850F7A19A97B2100C60CD4 /* PTCGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCGeometryUtils.h; sourceTree = "<group>"; };
-		22850F7B19A97B2100C60CD4 /* PTCGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCGeometryUtils.m; sourceTree = "<group>"; };
-		22850F7D19A9800700C60CD4 /* PTCBouncyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCBouncyButton.h; sourceTree = "<group>"; };
-		22850F7E19A9800700C60CD4 /* PTCBouncyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCBouncyButton.m; sourceTree = "<group>"; };
-		22850F6719A9427C00C60CD4 /* PTCBouncyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCBouncyButton.h; sourceTree = "<group>"; };
-		22850F6819A9427C00C60CD4 /* PTCBouncyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCBouncyButton.m; sourceTree = "<group>"; };
 		22850F6B19A957C200C60CD4 /* PTCOverlayPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCOverlayPresentationController.h; sourceTree = "<group>"; };
 		22850F6C19A957C200C60CD4 /* PTCOverlayPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCOverlayPresentationController.m; sourceTree = "<group>"; };
 		22850F6E19A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCOverlayTransitioningDelegate.h; sourceTree = "<group>"; };
 		22850F6F19A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCOverlayTransitioningDelegate.m; sourceTree = "<group>"; };
+		22850F7A19A97B2100C60CD4 /* PTCGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCGeometryUtils.h; sourceTree = "<group>"; };
+		22850F7B19A97B2100C60CD4 /* PTCGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCGeometryUtils.m; sourceTree = "<group>"; };
+		22850F7D19A9800700C60CD4 /* PTCBouncyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCBouncyButton.h; sourceTree = "<group>"; };
+		22850F7E19A9800700C60CD4 /* PTCBouncyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCBouncyButton.m; sourceTree = "<group>"; };
+		22850F8019A9810800C60CD4 /* PTCOverlayPresentationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTCOverlayPresentationAnimator.h; sourceTree = "<group>"; };
+		22850F8119A9810800C60CD4 /* PTCOverlayPresentationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTCOverlayPresentationAnimator.m; sourceTree = "<group>"; };
 		22F403FA19A8F1AC001ECA35 /* PopTastic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTastic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F403FE19A8F1AC001ECA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F403FF19A8F1AC001ECA35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +104,8 @@
 		22850F6A19A9579000C60CD4 /* Overlay Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				22850F8019A9810800C60CD4 /* PTCOverlayPresentationAnimator.h */,
+				22850F8119A9810800C60CD4 /* PTCOverlayPresentationAnimator.m */,
 				22850F6B19A957C200C60CD4 /* PTCOverlayPresentationController.h */,
 				22850F6C19A957C200C60CD4 /* PTCOverlayPresentationController.m */,
 				22850F6E19A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.h */,
@@ -361,6 +363,7 @@
 				22850F7019A9591D00C60CD4 /* PTCOverlayTransitioningDelegate.m in Sources */,
 				22F4042319A8F3EC001ECA35 /* UIColor+ColorMap.m in Sources */,
 				22850F6619A904FE00C60CD4 /* PTCDangerIndicator.m in Sources */,
+				22850F8219A9810800C60CD4 /* PTCOverlayPresentationAnimator.m in Sources */,
 				225716EA19A8FA94006EBD62 /* PTCDangerViewController.m in Sources */,
 				22F4040019A8F1AC001ECA35 /* main.m in Sources */,
 				22850F6D19A957C200C60CD4 /* PTCOverlayPresentationController.m in Sources */,

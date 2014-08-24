@@ -16,6 +16,7 @@
 
 #import "PTCOverlayTransitioningDelegate.h"
 #import "PTCOverlayPresentationController.h"
+#import "PTCOverlayPresentationAnimator.h"
 
 @implementation PTCOverlayTransitioningDelegate
 
@@ -24,6 +25,10 @@
                                                           sourceViewController:(UIViewController *)source {
   return [[PTCOverlayPresentationController alloc] initWithPresentedViewController:presented
                                                           presentingViewController:presenting];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+  return [PTCOverlayPresentationAnimator new];
 }
 
 @end

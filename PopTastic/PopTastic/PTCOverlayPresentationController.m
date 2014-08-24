@@ -39,6 +39,12 @@
   return CGRectInset(self.containerView.bounds, 20, 20);
 }
 
+- (void)containerViewWillLayoutSubviews {
+  CGRect presentedFrame = [self frameOfPresentedViewInContainerView];
+  presentedFrame.origin = CGPointZero;
+  self.presentedView.bounds = presentedFrame;
+}
+
 - (void)presentationTransitionWillBegin {
   self.dimmingView.frame = self.containerView.bounds;
   self.dimmingView.alpha = 0.0;
